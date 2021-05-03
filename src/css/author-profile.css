@@ -1,0 +1,67 @@
+.author-name{
+    color: whitesmoke;
+    margin-top: 20px;
+    /* margin-bottom: 0; */
+}
+.author-flex{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+}
+.author-address-block{
+    justify-content: flex-start;
+    color: #a19b9b;
+    font-size: 14px;
+    background-color: #401834;
+    border-radius: 40px;
+    padding: 10px 20px;
+}
+.blogs-heading{
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+.div-cnt{
+    margin-bottom: 50px;
+}
+.blog-cnt-flex{
+    display: flex;
+    flex-direction: row;
+    background-color: #00340d;
+    padding: 20px;
+    border-radius: 5px;
+}
+.likes-cnt-flex{
+    display: flex;
+    flex-direction: row;
+    background-color: #1f1740;
+    padding: 20px;
+    border-radius: 5px;
+}
+.blog-cnt{
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+    background-color: #00cf35;
+    border-radius: 50%;
+}
+.likes-cnt{
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+    background-color: #7c5cff;
+    border-radius: 50%;
+}
+.count{
+    position: absolute;
+    top: 35%;
+    left: 17.5%;
+    font-size: 20px;
+    color: #000;
+}
+.total-blogs{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.total-likes{
+    color: whitesmoke;
+}

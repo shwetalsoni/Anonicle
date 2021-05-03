@@ -1,0 +1,45 @@
+.donate-btn{
+    border: 2px solid  #ff62ce;
+    border-radius: 40px;
+    padding: 5px 20px;
+    color: #ff62ce;
+}
+.donate-btn:hover{
+    background-color: #401834;
+    color: #ff62ce;
+}
+.modal{
+    background-color: #121212;
+}
+.close-btn{
+    border: 0;
+    background-color: transparent;
+    color: #00b8ff;
+}
+.modal-donate-btn{
+    margin-left: 120px;
+    background-color: #00b8ff;
+    color: #000;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+.modal-title{
+    color: whitesmoke;
+}
+.p-text{
+    color: rgb(185, 180, 180);
+}
+.enter-amount{
+    color: rgb(185, 180, 180);
+    font-weight: 500;
+}
+.modal-input{
+    color: #000;
+    background-color: transparent;
+    outline: 0;
+    border: 1px solid #404040;
+}
+.tez{
+    color: whitesmoke;
+}

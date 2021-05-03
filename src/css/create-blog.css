@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
+
+form{
+    margin-top: 30px;
+}
+.form-group:active, .form-group:focus, .form-group:hover{
+    border-left: 1px solid grey;
+}
+.form-control{
+    background-color: #000;
+    border: 0;
+    font-family: 'Crimson Text', serif;
+    color: whitesmoke;
+}
+
+.form-control:active, .form-control:focus, .form-control:hover{
+    background-color: #000;
+    color: whitesmoke;
+    box-shadow: none;
+}
+input[type=text]{
+    font-family: 'Crimson Text', serif;
+    font-size: 25px;
+    color: whitesmoke;
+}
+input[type=text]:active, input:focus, input:hover{
+    color: whitesmoke;
+}
+.title::placeholder{
+    font-size: 30px;
+}
+.topic::placeholder{
+    font-size: 20px;
+}
+#content::placeholder{
+    font-size: 20px;
+}
+.img::placeholder{
+    font-size: 20px;
+}
+.btn-submit{
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 20px;
+    background-color: #00b8ff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.writing-as{
+    color: grey;
+    padding: 0;
+}
+.writing-as-div{
+    margin-top: 30px;
+    margin-left: 15px;
+    background-color: #401834;
+    padding: 0px 5px 0px 5px;
+    border-radius: 40px;
+}
+
+#content{
+    white-space: pre-wrap;
+}

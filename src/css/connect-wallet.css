@@ -1,0 +1,17 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.btn-round-hollow{
+    background-color: transparent;
+    border: 2px solid #0abde3;
+    border-radius: 30px;
+    color: #0abde3;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    padding: 5px 20px;
+}
+.btn-round-hollow:hover{
+    background-color: #0abde3;
+    color: #fff;
+}

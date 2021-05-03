@@ -1,0 +1,61 @@
+.blog-card-body{
+    background-color: #222222;
+    border-radius: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 30px;
+}
+
+.blog-card-body:hover{
+    text-decoration: none;
+}
+.title{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.name{
+    color: #06b3f9;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.card-img{
+    width: 100%;
+    /* height: 200px; */
+}
+.content{
+    color: #bdb8b8;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 5em;
+    line-height: 1.6em;
+    margin-bottom: 0;
+}
+.card-footer-tag{
+    padding-left:20px ;
+    padding-bottom: 20px;
+}
+.hashtag{
+    margin-top: 0;
+    color: grey;
+    font-size: 18px;
+    font-weight: 600;
+}
+.blog-card-likes{
+    color: grey;
+    margin-right: 5px;
+    margin-top: 0px;
+    font-weight: 500;
+}
+.likes-text{
+    color: grey;
+    font-weight: 500;
+}
+.home-like{
+    width: 20px;
+    margin-right: 10px;
+}
+            

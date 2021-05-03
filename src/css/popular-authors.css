@@ -1,0 +1,52 @@
+.popular{
+    /* position: sticky;
+    top: 5%; */
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.popular-head{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.popular-list{
+    border-left: 1px solid #404040;
+    border-right: 1px solid #404040;
+    padding-top: 10px;
+}
+.popular-author{
+    color: #06b3f9;
+}
+.stats-flex{
+    display: flex;
+    flex-direction: row;
+}
+.popular-author-blog-cnt{
+    margin-right: 20px;
+}
+.popular-item{
+    display: flex;
+    border-bottom: 1px solid #404040;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.popular-author-blog-cnt-block{
+    background-color: #401834;
+    font-weight: 500;
+    color: #a19b9b;
+    border-radius: 5px ;
+}
+.popular-author-likes-likes-block{
+    background-color: #00340d;
+    color: #00cf35;
+    border-radius: 5px;
+    font-weight: 400;
+}
+.popular-author-blog-cnt-head{
+    color: grey;
+}
+.popular-author-likes-cnt-head{
+    color: grey;
+}
