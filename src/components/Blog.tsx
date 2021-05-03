@@ -98,6 +98,12 @@ Prior to her casting in Harry Potter, Watson’s acting experience was sorely li
         if(contentParent){
             render(<ReactMarkdown>{content}</ReactMarkdown>, contentParent);
         }
+        setTimeout(()=> {
+            contentParent = document.getElementById('article-content');
+            if(contentParent){
+                render(<ReactMarkdown>{content}</ReactMarkdown>, contentParent);
+            }
+        },500)
     }, [blog])
 
     useEffect(() => {

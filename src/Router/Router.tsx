@@ -27,7 +27,6 @@ type RouterProps = {
   storage: any;
   contract: any;
   username: string;
-  openModal: any;
 }
 
 const Router = ({
@@ -48,7 +47,6 @@ const Router = ({
     contract,
     setUsername,
     username,
-    openModal
 }: RouterProps): any => {
     return (
       <HashRouter>
@@ -69,7 +67,7 @@ const Router = ({
           setUsername={setUsername}
           username={username}
           contract={contract}
-          openModal={openModal}
+          storage={storage}
         />
         <Switch>
             <Route exact

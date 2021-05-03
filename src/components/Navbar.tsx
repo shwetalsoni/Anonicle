@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import ConnectButton from './ConnectWallet';
 import DisconnectButton from './DisconnectWallet';
 
+
 import "../css/navbar.css";
 
 type NavbarProps = {
@@ -25,7 +26,7 @@ type NavbarProps = {
     setUsername: Dispatch<SetStateAction<string>>;
     username: string;
     contract: any;
-    openModal: any;
+    storage: any;
 };
 
 const NavBar = ({
@@ -45,7 +46,7 @@ const NavBar = ({
     setUsername,
     username,
     contract,
-    openModal
+    storage,
 }: NavbarProps): JSX.Element => {
 
   return (
@@ -90,7 +91,7 @@ const NavBar = ({
                             setUsername={setUsername}
                             userAddress={userAddress}
                             contract={contract}
-                            openModal={openModal}
+                            storage={storage}
                         />
                         )}
                     </li>

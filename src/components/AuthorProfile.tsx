@@ -75,7 +75,7 @@ const AuthorProfile = ({
                             blog.author = users.get(blog.publicKey);
                             blogList.push(blog);
                             blogCount++;
-                            likesCount = blog.likes;
+                            likesCount += parseInt(blog.likes);
                         }
                     });
 
@@ -83,6 +83,7 @@ const AuthorProfile = ({
                     setBlogCount(blogCount)
                     setLikesCount(likesCount)
                     console.log(blogList);
+                    console.log("likesCount",likesCount);
                     setExists(true);
                 }else{
                     setExists(false);

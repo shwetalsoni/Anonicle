@@ -29,7 +29,7 @@ type ButtonProps = {
   setUsername: Dispatch<SetStateAction<string>>;
   userAddress: string;
   contract: any;
-  openModal: any;
+  storage: any;
 };
 
 const customStyles = {
@@ -57,7 +57,7 @@ const ConnectButton = ({
     setUsername,
     userAddress,
     contract,
-    openModal
+    storage,
 }: ButtonProps): JSX.Element => {
 
     const [modalIsOpen,setIsOpen] = useState(false);
@@ -65,27 +65,38 @@ const ConnectButton = ({
 
     Modal.setAppElement('body')
 
-    // function openModal() {
-    //     setIsOpen(true);
-    // }
+    function openModal() {
+        setIsOpen(true);
+    }
 
     function closeModal(){
         setIsOpen(false);
     }
 
     const handleClick = async () => {
-        try {
-            const op = await contract.methods.addUser(userAddress, name).send()
-            await op.confirmation()
-            console.log("Set Name");
-            setUsername(name);
-            contract.storage()
-            .then((storage: any) => {
-                setStorage(storage);
-            })
-        } catch(error){
-            console.log(error)
+        if(storage && userAddress){
+            let [users, blogs] = parseStorage(storage);
+            if(users.has(userAddress)){
+                console.log("exists")
+                setUsername(users.get(userAddress));
+                closeModal();
+            }else{
+                closeModal();
+                try {
+                    const op = await contract.methods.addUser(userAddress, name).send();
+                    await op.confirmation();
+                    console.log("Set Name");
+                    setUsername(name);
+                    contract.storage()
+                    .then((storage: any) => {
+                        setStorage(storage);
+                    })
+                } catch(error){
+                    console.log(error)
+                }
+            }
         }
+        
     }
 
     function handleNameChange(e: any) {
@@ -108,6 +119,7 @@ const ConnectButton = ({
         if(users.has(userAddress)){
             console.log("exists")
             setUsername(users.get(userAddress));
+            closeModal();
         }else{
             console.log("not exists")
             openModal();
@@ -116,6 +128,7 @@ const ConnectButton = ({
     };
 
     const connectWallet = async (): Promise<void> => {
+        // openModal();
         try {
             await wallet.requestPermissions({
                 network: {

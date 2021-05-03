@@ -88,7 +88,7 @@ const Home = ({
             blogsMap.forEach((blog, id) => {
                 if(topUsersMap.has(blog.publicKey)){
                     topUsersMap.get(blog.publicKey).blogCount++;
-                    topUsersMap.get(blog.publicKey).likesCount += blog.likes;
+                    topUsersMap.get(blog.publicKey).likesCount += parseInt(blog.likes);
                 }
                 
             })
@@ -138,7 +138,10 @@ const Home = ({
                                 <a href="#" className="categories">All</a>
                                 <a href="#" className="categories">News</a>
                                 <a href="#" className="categories">Technology</a>
-                                <a href="#" className="categories">Others</a>
+                                <a href="#" className="categories">Opinion</a>
+                                <a href="#" className="categories">Tutorials</a>
+                                <a href="#" className="categories">Cultural</a>
+                                <a href="#" className="categories">Misc</a>
                             </div>
                         </div>
                         <div className="row">
