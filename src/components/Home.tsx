@@ -141,6 +141,7 @@ const Home = ({
                                 <a href="#" className="categories">Opinion</a>
                                 <a href="#" className="categories">Tutorials</a>
                                 <a href="#" className="categories">Cultural</a>
+                                <a href="#" className="categories">Political</a>
                                 <a href="#" className="categories">Misc</a>
                             </div>
                         </div>
