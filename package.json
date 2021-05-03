@@ -1,5 +1,5 @@
 {
-  "homepage": "*",
+  "homepage": ".",
   "name": "taquito-boilerplate-react",
   "version": "0.1.0",
   "private": true,
