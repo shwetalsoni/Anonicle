@@ -1,6 +1,23 @@
 # Anonicle
+A Decentralized platform to share your views **Freely and Anonymously** with no more censorship.
 
-## Getting Started
+# Why Anonicle ?
+* For motivating people to freely share their views and to support their fellow authors in the form of donation.
+* People can share their views anonymously ensuring no central authority controls the content of the articles.
+
+# Tech Stacks
+* Tezos
+* SmartPy
+* Taquito
+* React
+* TypeScript
+* Beacon SDK
+
+# Video Demonstration
+A brief decription about Anonicle and how to use it. Watch this video
+[Youtube](https://www.youtube.com/watch?v=P6iIDDxWL08)
+
+# Running Locally
 
 1. Clone your new repository:
 
