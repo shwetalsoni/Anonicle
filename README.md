@@ -1,5 +1,7 @@
 # Anonicle
-A Decentralized platform to share your views **Freely and Anonymously** with no more censorship.
+ A Decentralized platform to share your views **Freely and Anonymously** with no more censorship.
+<br><br>
+![Screenshot (681)](https://user-images.githubusercontent.com/57187745/117628729-17a80f00-b197-11eb-97de-940200a97300.png)
 
 # Why Anonicle ?
 * For motivating people to freely share their views and to support their fellow authors in the form of donation.
