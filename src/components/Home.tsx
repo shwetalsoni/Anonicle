@@ -8,6 +8,9 @@ import Trending from "./Trending";
 import Loader from './Loader';
 import PopularAuthors from './PopularAuthors';
 
+
+
+
 type HomeProps = {
     Tezos: TezosToolkit;
     setTezos: Dispatch<SetStateAction<any>>;
@@ -217,6 +220,7 @@ const Home = ({
 export function parseStorage(storage: any) {
     let users = new Map()
     let blogs = new Map()
+
     if(storage){
         storage.user.keyMap.forEach((key: any) => {
             let user = storage.user.valueMap.get('"'+key+'"');
@@ -225,7 +229,9 @@ export function parseStorage(storage: any) {
         })
         storage.blog.keyMap.forEach((key: any) => {
             blogs.set(key, storage.blog.valueMap.get('"'+key+'"'));
+
         })
+        
     }
     return [users, blogs]
 }

@@ -15,6 +15,19 @@ import { Redirect } from 'react-router';
 // import { Editor } from 'react-draft-wysiwyg';
 // import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
+const pinataSDK = require('@pinata/sdk');
+const pinata = pinataSDK('e518d10f4050c63e7ec6', '1c0a31804b5bad5b4167c8b229b9b9a0dafcab8a1c23240b1536cb1b681f9490');
+
+pinata.testAuthentication().then((result: any) => {
+    //handle successful authentication here
+    console.log("find-here")
+    console.log(result);
+}).catch((err: any) => {
+    //handle error here
+    console.log(err);
+});
+
+
 type CreateBlogProps = {
     setStorage: Dispatch<SetStateAction<any>>;
     contract: any;
@@ -49,6 +62,27 @@ const CreateBlog = ({
         setContent(e.target.value)
     }
     const handleSubmit = async (e: any) => {
+        const body = {
+            title: title,
+            topic: topic,
+            content: content,
+            author: userAddress
+        };
+        const options = {
+            pinataMetadata: {
+                name: 'Anonicle: '+ title,
+            },
+            pinataOptions: {
+                cidVersion: 0
+            }
+        };
+        
+        let ipfs = await pinata.pinJSONToIPFS(body, options)
+
+        let ipfsLink = "ipfs://"+ipfs.IpfsHash
+
+        console.log(ipfsLink)
+
         const date = + new Date();
         const blogKey = uuid();
         console.log(title, topic, imageURL, content);
@@ -56,7 +90,7 @@ const CreateBlog = ({
         try{
             const op = await contract.methods.createBlog(
                 blogKey,
-                content,
+                ipfsLink,
                 date,
                 imageURL,
                 userAddress,
@@ -81,6 +115,9 @@ const CreateBlog = ({
     if(redirect){
         return <Redirect to='/'></Redirect>
     }
+
+    
+    
 
     return(
         <div className="container">
