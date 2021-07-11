@@ -4,6 +4,7 @@ import { TezosToolkit } from "@taquito/taquito";
 import { BeaconWallet } from "@taquito/beacon-wallet";
 import ReactMarkdown from 'react-markdown'
 import {render} from 'react-dom'
+import axios from 'axios'
 
 import DonateButton from './DonateButton';
 import {parseStorage} from './Home';
@@ -93,6 +94,25 @@ Prior to her casting in Harry Potter, Watson’s acting experience was sorely li
         if(!content){
             content = defaultContent;
         }
+
+        if(content.substring(0, 7) == "ipfs://"){
+            let contentAddress = "https://cloudflare-ipfs.com/ipfs/" + content.slice(7)
+            axios.get(contentAddress)
+            .then((res: any) => {
+                console.log("ipfs-data")
+                console.log(res);
+                setContent(res.data.content)
+            })
+            .catch((err: any) => {
+
+            })
+        }else{
+            setContent(content);
+        }
+        
+    }, [blog])
+
+    function setContent(content: any){
         let contentParent = document.getElementById('article-content');
         console.log(contentParent);
         if(contentParent){
@@ -104,7 +124,7 @@ Prior to her casting in Harry Potter, Watson’s acting experience was sorely li
                 render(<ReactMarkdown>{content}</ReactMarkdown>, contentParent);
             }
         },500)
-    }, [blog])
+    }
 
     useEffect(() => {
         console.log(storage);
