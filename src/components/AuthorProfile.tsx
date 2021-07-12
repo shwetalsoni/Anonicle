@@ -12,15 +12,7 @@ import '../css/author-profile.css';
 
 type AuthorProfileProps = {
     Tezos: TezosToolkit;
-    setTezos: Dispatch<SetStateAction<any>>;
-    setContract: Dispatch<SetStateAction<any>>;
-    setWallet: Dispatch<SetStateAction<any>>;
-    setUserAddress: Dispatch<SetStateAction<string>>;
-    setUserBalance: Dispatch<SetStateAction<number>>;
-    setStorage: Dispatch<SetStateAction<any>>;
     contractAddress: string;
-    setBeaconConnection: Dispatch<SetStateAction<boolean>>;
-    setPublicToken: Dispatch<SetStateAction<string | null>>;
     wallet: BeaconWallet;
     userAddress: string;
     userBalance: number;
@@ -30,15 +22,7 @@ type AuthorProfileProps = {
 
 const AuthorProfile = ({
     Tezos,
-    setTezos,
-    setContract,
-    setWallet,
-    setUserAddress,
-    setUserBalance,
-    setStorage,
     contractAddress,
-    setBeaconConnection,
-    setPublicToken,
     wallet,
     userAddress,
     userBalance,
@@ -116,7 +100,6 @@ const AuthorProfile = ({
                                 <div className="ml-auto author-flex-right">
                                     <DonateButton
                                         Tezos={Tezos}
-                                        setUserBalance={setUserBalance}
                                         userAddress={userAddress}
                                         authorAddress={authorAddress}
                                         authorName={name}

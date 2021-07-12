@@ -12,37 +12,13 @@ import PopularAuthors from './PopularAuthors';
 
 
 type HomeProps = {
-    Tezos: TezosToolkit;
-    setTezos: Dispatch<SetStateAction<any>>;
-    setContract: Dispatch<SetStateAction<any>>;
-    setWallet: Dispatch<SetStateAction<any>>;
-    setUserAddress: Dispatch<SetStateAction<string>>;
-    setUserBalance: Dispatch<SetStateAction<number>>;
     setStorage: Dispatch<SetStateAction<any>>;
-    contractAddress: string;
-    setBeaconConnection: Dispatch<SetStateAction<boolean>>;
-    setPublicToken: Dispatch<SetStateAction<string | null>>;
-    wallet: BeaconWallet;
-    userAddress: string;
-    userBalance: number;
     storage: any;
     contract: any;
 }
 
 const Home = ({
-    Tezos,
-    setTezos,
-    setContract,
-    setWallet,
-    setUserAddress,
-    setUserBalance,
     setStorage,
-    contractAddress,
-    setBeaconConnection,
-    setPublicToken,
-    wallet,
-    userAddress,
-    userBalance,
     storage,
     contract,
 }: HomeProps): any => {
@@ -67,7 +43,6 @@ const Home = ({
             console.log(blogsList);
 
             // Trending Blogs
-            // let blogsList2 = blogsList;
             
             let trendingBlogs = blogsList;
             trendingBlogs = trendingBlogs.sort((a: any, b: any): number =>{

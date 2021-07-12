@@ -9,7 +9,6 @@ import ModalBody from "react-bootstrap/esm/ModalBody";
 
 type DonationButtonProps = {
     Tezos: TezosToolkit;
-    setUserBalance: Dispatch<SetStateAction<number>>;
     userAddress: string;
     authorAddress: string;
     authorName: string;
@@ -32,7 +31,6 @@ const customStyles = {
 
 const DonateButton = ({
     Tezos,
-    setUserBalance,
     userAddress,
     authorAddress,
     authorName
