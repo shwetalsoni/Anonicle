@@ -65,7 +65,6 @@ const Router = ({
           userAddress={userAddress}
           userBalance={userBalance}
           setUsername={setUsername}
-          username={username}
           contract={contract}
           storage={storage}
         />
@@ -73,19 +72,7 @@ const Router = ({
             <Route exact
               path="/"
               render={() => <Home
-                Tezos={Tezos}
-                setTezos={setTezos}
-                setContract={setContract}
-                setPublicToken={setPublicToken}
-                setWallet={setWallet}
-                setUserAddress={setUserAddress}
-                setUserBalance={setUserBalance}
                 setStorage={setStorage}
-                contractAddress={contractAddress}
-                setBeaconConnection={setBeaconConnection}
-                wallet={wallet}
-                userAddress={userAddress}
-                userBalance={userBalance}
                 storage={storage}
                 contract={contract}
               />}
@@ -94,15 +81,8 @@ const Router = ({
               path="/blog"
               render={() => <Blog
                 Tezos={Tezos}
-                setTezos={setTezos}
-                setContract={setContract}
-                setPublicToken={setPublicToken}
-                setWallet={setWallet}
-                setUserAddress={setUserAddress}
-                setUserBalance={setUserBalance}
                 setStorage={setStorage}
                 contractAddress={contractAddress}
-                setBeaconConnection={setBeaconConnection}
                 wallet={wallet}
                 userAddress={userAddress}
                 userBalance={userBalance}
@@ -114,15 +94,8 @@ const Router = ({
               path="/blog/:id"
               render={() => <Blog
                 Tezos={Tezos}
-                setTezos={setTezos}
-                setContract={setContract}
-                setPublicToken={setPublicToken}
-                setWallet={setWallet}
-                setUserAddress={setUserAddress}
-                setUserBalance={setUserBalance}
                 setStorage={setStorage}
                 contractAddress={contractAddress}
-                setBeaconConnection={setBeaconConnection}
                 wallet={wallet}
                 userAddress={userAddress}
                 userBalance={userBalance}
@@ -135,15 +108,7 @@ const Router = ({
               path="/authorProfile/:authorAddress"
               render={() => <AuthorProfile
                 Tezos={Tezos}
-                setTezos={setTezos}
-                setContract={setContract}
-                setPublicToken={setPublicToken}
-                setWallet={setWallet}
-                setUserAddress={setUserAddress}
-                setUserBalance={setUserBalance}
-                setStorage={setStorage}
                 contractAddress={contractAddress}
-                setBeaconConnection={setBeaconConnection}
                 wallet={wallet}
                 userAddress={userAddress}
                 userBalance={userBalance}

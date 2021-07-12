@@ -24,7 +24,6 @@ type NavbarProps = {
     userAddress: string;
     userBalance: number;
     setUsername: Dispatch<SetStateAction<string>>;
-    username: string;
     contract: any;
     storage: any;
 };
@@ -44,7 +43,6 @@ const NavBar = ({
     userAddress,
     userBalance,
     setUsername,
-    username,
     contract,
     storage,
 }: NavbarProps): JSX.Element => {

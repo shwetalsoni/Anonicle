@@ -6,14 +6,8 @@ import {v4 as uuid} from 'uuid';
 
 import Loader from './Loader';
 
-// import { Button } from 'react-bootstrap';
-// import Form from 'react-bootstrap/Form'
-
 import '../css/create-blog.css';
 import { Redirect } from 'react-router';
-
-// import { Editor } from 'react-draft-wysiwyg';
-// import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 const pinataSDK = require('@pinata/sdk');
 const pinata = pinataSDK('e518d10f4050c63e7ec6', '1c0a31804b5bad5b4167c8b229b9b9a0dafcab8a1c23240b1536cb1b681f9490');
@@ -136,11 +130,6 @@ const CreateBlog = ({
                         <div className="form-group">
                             <textarea className="form-control" id="content" rows={12} value={content} onChange={handleContentChange} placeholder="What do you wanna talk about? (Markdown Supported)"></textarea>
                         </div>
-                        {/* <Editor
-                            wrapperClassName="wrapper"
-                            editorClassName="editor"
-                            toolbarClassName="toolbar"
-                        /> */}
                         <div className="form-group">
                             <input type="text" className="form-control img" id="img" value={imageURL} onChange={handleImageURLChange} placeholder="Image URL" />
                         </div>
